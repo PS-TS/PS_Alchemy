@@ -12,6 +12,7 @@ public class AlchemyManager : MonoBehaviour
     public GameObject buttonPrefab;
     public GameObject elementPrefab;
     public GameObject winTab;
+    public GameObject startMenu;
     public Transform canvasTransform;
     public TMP_Text playerProgressText;
 
@@ -136,6 +137,13 @@ public class AlchemyManager : MonoBehaviour
         if (winTab != null)
         {
             winTab.SetActive(true);
+        }
+    }
+    public void StartGame()
+    {
+        if (startMenu != null)
+        {
+            startMenu.SetActive(false);
         }
     }
 

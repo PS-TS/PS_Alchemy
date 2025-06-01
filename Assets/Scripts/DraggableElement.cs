@@ -29,8 +29,7 @@ public class DraggableElement : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     {
         canvasGroup.blocksRaycasts = true;
 
-        // Find all draggable elements
-        DraggableElement[] allElements = FindObjectsOfType<DraggableElement>();
+        DraggableElement[] allElements = Object.FindObjectsByType<DraggableElement>(FindObjectsSortMode.None);
 
         foreach (DraggableElement other in allElements)
         {
@@ -39,18 +38,16 @@ public class DraggableElement : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
             if (AreRectsOverlapping(rectTransform, other.rectTransform))
             {
-                // Try to combine these two elements
                 AlchemyManager manager = FindFirstObjectByType<AlchemyManager>();
                 if (manager != null)
                 {
                     manager.TryCreateCombination(this, other);
-                    return; // Combination attempt done, exit early
+                    return;
                 }
             }
         }
     }
 
-    // Helper method to check overlap between UI elements
     private bool AreRectsOverlapping(RectTransform rect1, RectTransform rect2)
     {
         Rect r1 = GetScreenRect(rect1);
@@ -58,7 +55,6 @@ public class DraggableElement : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         return r1.Overlaps(r2);
     }
 
-    // Converts RectTransform bounds to a screen space Rect
     private Rect GetScreenRect(RectTransform rectTransform)
     {
         Vector3[] corners = new Vector3[4];
