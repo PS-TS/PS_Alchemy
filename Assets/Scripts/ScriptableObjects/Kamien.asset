@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578f4afa091c9c145ba7731593f603b7, type: 3}
   m_Name: Kamien
   m_EditorClassIdentifier: 
-  elementName: kamien
+  elementName: "Kamie\u0144"
   icon: {fileID: 4635236622590111694, guid: 7340951bd4a04494a8fcde05b4869a7a, type: 3}

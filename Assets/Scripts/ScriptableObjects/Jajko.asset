@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578f4afa091c9c145ba7731593f603b7, type: 3}
   m_Name: Jajko
   m_EditorClassIdentifier: 
-  elementName: jajko
+  elementName: Jajko
   icon: {fileID: 4438228848617065670, guid: 175a529b6eed3e84cbfe5e922fb652bd, type: 3}

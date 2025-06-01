@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578f4afa091c9c145ba7731593f603b7, type: 3}
   m_Name: Deszcz
   m_EditorClassIdentifier: 
-  elementName: deszcz
+  elementName: Deszcz
   icon: {fileID: 7315044476003330856, guid: c4b26d93deaadba4a959aebb696f6ccb, type: 3}

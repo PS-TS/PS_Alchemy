@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578f4afa091c9c145ba7731593f603b7, type: 3}
   m_Name: Roslina
   m_EditorClassIdentifier: 
-  elementName: roslina
+  elementName: "Ro\u015Blina"
   icon: {fileID: -2905312062976007113, guid: f6d10f636f966c445af65733b200cfd0, type: 3}

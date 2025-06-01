@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578f4afa091c9c145ba7731593f603b7, type: 3}
   m_Name: Zycie
   m_EditorClassIdentifier: 
-  elementName: zycie
+  elementName: "\u017Bycie"
   icon: {fileID: -8840719156893111611, guid: 4b0c1e096b9191348ae7802768f5545f, type: 3}

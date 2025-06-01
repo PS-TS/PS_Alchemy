@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578f4afa091c9c145ba7731593f603b7, type: 3}
   m_Name: Jaszczurka
   m_EditorClassIdentifier: 
-  elementName: jaszczurka
+  elementName: Jaszczurka
   icon: {fileID: 1534255995035008514, guid: 8a27455a34f6a014c9bd38f217b57fb4, type: 3}
