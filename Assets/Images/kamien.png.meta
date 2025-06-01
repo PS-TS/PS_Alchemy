@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09a78961d6e6ba0499f466229ce8e983
+guid: 7340951bd4a04494a8fcde05b4869a7a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 577061675142091583
-    second: ogien_0
+      213: 4635236622590111694
+    second: kamien_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ogien_0
+      name: kamien_0
       rect:
         serializedVersion: 2
-        x: 140
-        y: 77
-        width: 215
-        height: 405
+        x: 39
+        y: 113
+        width: 438
+        height: 324
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3316504982220800800000000000000
-      internalID: 577061675142091583
+      spriteID: ecf6d53562ba35040800000000000000
+      internalID: 4635236622590111694
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ogien_0: 577061675142091583
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

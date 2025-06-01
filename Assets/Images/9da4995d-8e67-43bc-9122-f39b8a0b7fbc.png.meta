@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09a78961d6e6ba0499f466229ce8e983
+guid: c74e269bfe388f644a248113e67c5afe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 577061675142091583
-    second: ogien_0
+      213: -8004875238156541007
+    second: 9da4995d-8e67-43bc-9122-f39b8a0b7fbc_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ogien_0
+      name: 9da4995d-8e67-43bc-9122-f39b8a0b7fbc_0
       rect:
         serializedVersion: 2
-        x: 140
-        y: 77
-        width: 215
-        height: 405
+        x: 0
+        y: 0
+        width: 825
+        height: 843
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3316504982220800800000000000000
-      internalID: 577061675142091583
+      spriteID: 1b3eb5ee168f8e090800000000000000
+      internalID: -8004875238156541007
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ogien_0: 577061675142091583
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

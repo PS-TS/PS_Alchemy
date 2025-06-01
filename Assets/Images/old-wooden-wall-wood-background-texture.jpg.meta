@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      old-wooden-wall-wood-background-texture_0: 597640013207327856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

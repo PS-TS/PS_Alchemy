@@ -13,7 +13,7 @@ public class AlchemyManager : MonoBehaviour
     public GameObject elementPrefab;
     public GameObject winTab;
     public GameObject startMenu;
-    public Transform canvasTransform;
+    public Transform contentTransform;
     public TMP_Text playerProgressText;
 
     public List<ElementData> allElements;
@@ -77,7 +77,7 @@ public class AlchemyManager : MonoBehaviour
 
     public void SpawnElement(ElementData element)
     {
-        GameObject el = Instantiate(elementPrefab, canvasTransform);
+        GameObject el = Instantiate(elementPrefab, contentTransform);
         DraggableElement draggable = el.GetComponent<DraggableElement>();
         draggable.elementData = element;
 
@@ -102,7 +102,7 @@ public class AlchemyManager : MonoBehaviour
             Destroy(a.gameObject);
             Destroy(b.gameObject);
 
-            GameObject newElement = Instantiate(elementPrefab, canvasTransform);
+            GameObject newElement = Instantiate(elementPrefab, contentTransform);
             DraggableElement draggable = newElement.GetComponent<DraggableElement>();
             draggable.elementData = result;
             newElement.transform.position = spawnPos;
@@ -146,10 +146,21 @@ public class AlchemyManager : MonoBehaviour
             startMenu.SetActive(false);
         }
     }
+    public void PauseGame()
+    {
+        if (startMenu != null)
+        {
+            startMenu.SetActive(true);
+        }
+    }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 }
