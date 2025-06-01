@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class AlchemyManager : MonoBehaviour
 {
@@ -9,13 +11,18 @@ public class AlchemyManager : MonoBehaviour
     public Transform buttonPanel;
     public GameObject buttonPrefab;
     public GameObject elementPrefab;
+    public GameObject winTab;
     public Transform canvasTransform;
+    public TMP_Text playerProgressText;
+
+    public List<ElementData> allElements;
+    public List<ElementData> startingElements;
 
     private HashSet<ElementData> discoveredElements = new HashSet<ElementData>();
     private HashSet<ElementData> createdButtons = new HashSet<ElementData>();
 
-
-    public List<ElementData> startingElements;
+    public int discoveredCount => discoveredElements.Count-4;
+    public int totalCount => allElements.Count-4;
 
     void Start()
     {
@@ -23,7 +30,9 @@ public class AlchemyManager : MonoBehaviour
         {
             UnlockElement(element);
         }
+
         UpdateAvailableButtons();
+        UpdateProgressUI();
     }
 
     public void UnlockElement(ElementData element)
@@ -33,6 +42,12 @@ public class AlchemyManager : MonoBehaviour
 
         discoveredElements.Add(element);
         CreateButtonIfNeeded(element);
+        UpdateProgressUI();
+
+        if (discoveredCount >= totalCount)
+        {
+            TriggerWin();
+        }
     }
 
     public void CreateButtonIfNeeded(ElementData element)
@@ -59,7 +74,6 @@ public class AlchemyManager : MonoBehaviour
         createdButtons.Add(element);
     }
 
-
     public void SpawnElement(ElementData element)
     {
         GameObject el = Instantiate(elementPrefab, canvasTransform);
@@ -73,8 +87,6 @@ public class AlchemyManager : MonoBehaviour
             image.enabled = true;
         }
     }
-
-
 
     public void TryCreateCombination(DraggableElement a, DraggableElement b)
     {
@@ -105,15 +117,31 @@ public class AlchemyManager : MonoBehaviour
 
     public void UpdateAvailableButtons()
     {
-        foreach (var combo in combiner.combinations)
+        foreach (var element in discoveredElements)
         {
-            var result = combo.result;
-            bool bothKnown = discoveredElements.Contains(combo.element1) && discoveredElements.Contains(combo.element2);
-
-            if (bothKnown)
-            {
-                CreateButtonIfNeeded(result);
-            }
+            CreateButtonIfNeeded(element);
         }
     }
+
+    public void UpdateProgressUI()
+    {
+        if (playerProgressText != null)
+        {
+            playerProgressText.text = $"Odkryte: {discoveredCount} / {totalCount}";
+        }
+    }
+
+    public void TriggerWin()
+    {
+        if (winTab != null)
+        {
+            winTab.SetActive(true);
+        }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
